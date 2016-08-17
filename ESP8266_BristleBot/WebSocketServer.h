@@ -1,5 +1,5 @@
-#ifndef BristleBot_h
-#define BristleBot_h
+#ifndef WebSocketServer_h
+#define WebSocketServer_h
 
 #include <Arduino.h>
 #include "FS.h"

@@ -1,7 +1,7 @@
 #ifndef ProximityFunctions_h
 #define ProximityFunctions_h
 
-#include "BristleBot.h"
+#include "WebSocketServer.h"
 
 //----------------------------------------------------------------------- 
 
