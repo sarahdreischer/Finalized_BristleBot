@@ -123,8 +123,8 @@ void setup() {
     
     digitalWrite(RIGHT, LOW);
     digitalWrite(LEFT, LOW);
-    digitalWrite(IRTX, HIGH);
-    digitalWrite(IRTXBACK, HIGH);
+    digitalWrite(IRTX, LOW);
+    digitalWrite(IRTXBACK, LOW);
     digitalWrite(REDLED, HIGH);
     digitalWrite(REDLEDBACK, HIGH);
     digitalWrite(BLUELED, LOW);
@@ -143,12 +143,6 @@ void setup() {
   IPAddress myIP = WiFi.softAPIP();
   USE_SERIAL.print("AP IP address: ");
   USE_SERIAL.println(myIP);
-  
-/* Connect to external Access point     */
-//    WiFiMulti.addAP("SSID", "passpasspass");
-//    while(WiFiMulti.run() != WL_CONNECTED) {
-//        delay(100);
-//    }
 
 /* Start the HTTP server      */
   server.on("/",handleWebsite);

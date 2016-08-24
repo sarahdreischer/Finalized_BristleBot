@@ -87,10 +87,8 @@ void setup() {
     pinMode(IRTXBACK,OUTPUT);
     pinMode(REDLEDBACK,OUTPUT);
     
-    //digitalWrite(RIGHT, LOW);
-    //digitalWrite(LEFT, LOW);
-    digitalWrite(IRTX, HIGH);
-    digitalWrite(IRTXBACK, HIGH);
+    digitalWrite(IRTX, LOW);
+    digitalWrite(IRTXBACK, LOW);
     digitalWrite(REDLED, HIGH);
     digitalWrite(REDLEDBACK, HIGH);
     digitalWrite(BLUELED, LOW);

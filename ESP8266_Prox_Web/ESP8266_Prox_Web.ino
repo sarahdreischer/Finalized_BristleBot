@@ -34,8 +34,6 @@ volatile int pulselengthL = 0;
 volatile int pulselengthR = 0;
 int oldL = 0;
 int oldR = 0;
-int steer = 128;
-int power = 0;
 int front = 1;
 int frontdet = 0;
 int Ldetect = 0;
@@ -177,8 +175,8 @@ void setup() {
     pinMode(IRTXBACK,OUTPUT);
     pinMode(REDLEDBACK,OUTPUT);
     
-    digitalWrite(IRTX, HIGH);
-    digitalWrite(IRTXBACK, HIGH);
+    digitalWrite(IRTX, LOW);
+    digitalWrite(IRTXBACK, LOW);
     digitalWrite(REDLED, HIGH);
     digitalWrite(REDLEDBACK, HIGH);
     digitalWrite(BLUELED, LOW);

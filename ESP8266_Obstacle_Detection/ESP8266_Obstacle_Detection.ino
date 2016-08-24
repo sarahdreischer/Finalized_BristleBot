@@ -1,4 +1,4 @@
-#include <Arduino.h>
+ #include <Arduino.h>
 #include "FS.h"
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
@@ -45,25 +45,25 @@ String distance;
 //----------------------------------------------------------------------- 
 //Calibration of power and steering can be done for better performance
   void obstacleDet() {
-    if (pulselengthL > 100) { // change the limit for the obstacle detection
+    if (pulselengthL > 90) { // change the limit for the obstacle detection
         power = 255;    
-        steer = 255;
+        steer = 0;
       }
-    if (pulselengthR > 100) {
+    if (pulselengthR > 90) {
         power = 255;
-        steer =   0;
+        steer = 255;
     }
-    if (pulselengthR > 100 && pulselengthL > 100) {
+    if (pulselengthR > 90 && pulselengthL > 90) {
       if (pulselengthR > pulselengthL) {
         power = 255;
-        steer =   0;
+        steer = 255;
       }
       else {
         power = 255;
-        steer = 255;
+        steer =   0;
       }
     }
-    if (pulselengthR < 100 && pulselengthL < 100) {
+    if (pulselengthR < 90 && pulselengthL < 90) {
       power = 100;
       steer = 128;
     }
